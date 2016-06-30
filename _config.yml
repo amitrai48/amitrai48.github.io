@@ -1,0 +1,18 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: amitrai48
+email: amitrai48@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  My Name is Amit Rai, I am a software engineer and a gamer from India. I use this blog as a platform to learn,revise and teach about various software development topics.
+baseurl: "" # the subpath of your site, e.g. /blog
+twitter_username: amitrai48
+github_username:  amitrai48
+
+# Build settings
+markdown: kramdown
