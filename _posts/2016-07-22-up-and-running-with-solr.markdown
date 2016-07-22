@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Up and running with SOLR"
-date:   2016-07-22
+date:   2016-07-22 12:30:00
 categories: Solr
 ---
 
@@ -204,6 +204,8 @@ Lets explore further, put on your fedora (Big Indiana Jones fan!!). A typical di
                 solrconfig.xml
                 managed-schema
             data/
+
+Mostly solr home dir is in your root folder/server/solr.
 
 There are some other files but we mentioned only the main ones here.
 
