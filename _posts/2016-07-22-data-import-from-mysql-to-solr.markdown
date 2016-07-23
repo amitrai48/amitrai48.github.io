@@ -5,7 +5,7 @@ date:   2016-07-22 12:45:00
 categories: Solr Data-Import
 ---
 
-In our earlier [post]({% post_url 2016-07-22-up-and-running-with-solr %}) we started to work with solr. Most of the time our primary data source is some other database like MySQL or mongodb. We use solr to index data from those database and serve it to client. The benefit of such architecture is that solr is not the right choice as a primary data source. Though the read speed in solr is blazingly fast the write speed isnt a lot. Plus when you use MySQL or mongodb or any other datasource as your primary data source you get the advantages of those specific datasource. So the question now is how do you import data from such primary data source to your solr?
+In our earlier [post]({% post_url 2016-07-22-up-and-running-with-solr %}) we started working with solr. Most of the time our primary data source is some other database like MySQL or mongodb. We use solr to index data from those database and serve it to client.<!--excerpt--> The benefit of such architecture is that solr is not the right choice as a primary data source. Though the read speed in solr is blazingly fast the write speed isnt a lot. Plus when you use MySQL or mongodb or any other datasource as your primary data source you get the advantages of those specific datasource. So the question now is how do you import data from such primary data source to your solr?
 
 Data Import Handler
 --

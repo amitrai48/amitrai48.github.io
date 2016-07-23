@@ -7,7 +7,7 @@ categories: Spring Spring-Boot
 
 
 Spring has come a long way from where it started. With one of the most used java framework
-in enterprises, it has a lot of community support, materials and tutorials.
+in enterprises, it has a lot of community support, materials and tutorials.<!--excerpt-->
 
 **Why Spring-Boot then?**
 

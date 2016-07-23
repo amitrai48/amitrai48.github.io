@@ -16,3 +16,11 @@ github_username:  amitrai48
 
 # Build settings
 markdown: kramdown
+
+# Timezone settings
+
+timezone: Asia/Kolkata
+
+#excerpt separator
+
+excerpt_separator: <!--excerpt-->

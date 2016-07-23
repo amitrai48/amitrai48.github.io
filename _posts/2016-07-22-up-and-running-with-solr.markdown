@@ -24,11 +24,8 @@ td{
 }
 </style>
 
-Solr
---
-
 Solr is an open source project built on Apache Lucene. Features of Solr include full-text search, hit highlighting, faceted search, real-time indexing, dynamic clustering, database integration, NoSQL features and rich document (e.g., Word, PDF) handling.
-Solr powers the search and navigation features of many of the world's largest internet sites.
+Solr powers the search and navigation features of many of the world's largest internet sites.<!--excerpt-->
 
 Java
 --
