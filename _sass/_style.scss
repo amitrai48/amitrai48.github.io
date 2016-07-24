@@ -5,3 +5,48 @@
 .padding-15{
     padding:15px;
 }
+
+.social-icon{
+    padding:10px;
+    border:1px solid transparent;
+}
+
+.social-icon .icon>svg{
+    width:20px;
+    height:20px;
+}
+
+.social-icon.social-fb{
+    background: #3b5998;
+}
+
+.social-icon.social-twitter{
+    background: #00aced;
+}
+
+.social-icon.social-gp{
+    background:#dd4b39;
+    margin-left: 5px;
+}
+
+.social-icon.social-gp .icon>svg{
+    width: 34px;
+    height: 25px;
+}
+
+.social-icon.social-fb .icon>svg{
+    width: 24px;
+    height: 24px;
+}
+
+.social-icon .icon > svg path{
+    fill: #FFF;
+}
+
+.post ul, .post-content ul li{
+    list-style-type: inherit; 
+}
+
+.page-content strong{
+    font-weight: bold;
+}
