@@ -3,6 +3,7 @@ layout: post
 title:  "An Introduction to Spring Boot"
 date:   2016-06-30
 categories: Spring Spring-Boot
+comments: true
 ---
 
 
@@ -33,54 +34,50 @@ With Spring Boot you get that "Hello World" experience with minimum fuss.
 * Absolutely **no code generation** and **no requirement for XML** configuration.
 
 What is Spring Boot ?
--
+--
 
 In simple terms `Spring Boot = Spring Framework - XML Configuration + Integrated Server`.
 
 Spring Boot Components
--
+--
 
-Spring Boot Auto Configure
-==
+**Spring Boot Auto Configure**
+
 
 A module to auto configure a wide range of Spring projects. It will detect availabilty of common frameworks used (Spring Batch,Spring Data JPA,Hibernate). When the framework is detected it will try to auto configure that framework with some sensible defaults, which can be overridden by configuration in an `application.properties`/`application.yml` file or as command line switches.You can see common application properties used by spring [here](https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html) .
 
-Spring Boot Core
-==
+**Spring Boot Core**
+
 
 The **core** module provides the fundamental parts of the framework, including the IoC(Inversion of Control) and Dependency Injection features.
 
-Spring Boot CLI
-==
+**Spring Boot CLI**
 
 A command line tool that can be used if you want to quickly prototype with Spring.Follow the instructions in the main documentation of Spring if you want to [install the Spring Boot CLI](http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#getting-started-installing-the-cli).
 
-Spring Booot Actuator
-==
+**Spring Booot Actuator**
 
 Spring Boot Actuator adds several production grade services to your application. It helps you to monitor and manage your application when it's pushed to production.
 
-Spring Boot Starters
-==
+**Spring Boot Starters**
 
 To get you started as quick as possible there are several starter dependency descriptors that you can include in your application. They provide a one-stop shop for all the dependency that your application need.
 For example, if your application is a web app, `spring-boot-starter-web` supports for full-stack web development, including Tomcat and `spring-webmvc`. More information can be found [here](http://docs.spring.io/spring-boot/docs/1.2.1.RELEASE/reference/htmlsingle/#using-boot-starter-poms).
 
 Start using Spring Boot
---
+---
 
 To give you a hands on experience of Spring we will create some applications on spring. You can directly jump on this [examples](#examples) and get your hands dirty.
 
 What you will need?
-==
+---
 
 * Build Systems
-==
+---
    The easiest way to manage your applications dependency is to use a build system.You can use any build system you like, the most used once are [Maven](https://maven.apache.org/) and [Gradle](http://gradle.org/).
 
    Maven
-===
-
+   ----
    **Note** : You can skip the installation part if you are using an IDE such as eclipse.
 
    Maven is downloadable as a zip file at http://maven.apache.org/download.cgi. Only the binaries are required, so look for the link to apache-maven-{version}-bin.zip or apache-maven-{version}-bin.tar.gz. Once you have downloaded the zip file, unzip it to your computer. Then add the bin folder to your path.
@@ -99,7 +96,7 @@ What you will need?
         OS name: "windows 7", version: "6.1", arch: "amd64", family: "dos"
    
    pom.xml
-===
+----
 
    Maven is based on the concept of a project object model (POM). All the required dependencies and your application informations are listed in pom.xml, which sits in the root folder. A typical pom.xml may look like this : 
 
@@ -141,7 +138,7 @@ What you will need?
    **Dont pull your hairs yet**. It's okay if the content of this file makes no sense to you.. Read Along!
 
    Diving in the pom (wait pond!!!!)
-===
+----
 
         <modelVersion>4.0.0</modelVersion>
    
@@ -179,7 +176,7 @@ What you will need?
    The second dependency `spring-boot-starter-data-jpa` helps in management of relation data. Further info can be found [here](http://docs.spring.io/spring-data/jpa/docs/current/reference/html/).
 
    Using the Spring Boot Maven Plugin
-===
+----
 
    Spring Boot includes a [Maven plugin](http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#build-tool-plugins-maven-plugin) that can package the project as an executable jar. Add the plugin to your `<plugins>` section if you want to use it:
         <build>
@@ -192,11 +189,11 @@ What you will need?
         </build>
 
    Gradle
-===
+---
    We will update this section soon. 
 
 * IDE
-==
+---
 
    It depends totally on you which IDE you want to use or if you don't wanna use them at all. But using IDE will save you a lot of time and increase your productivity. We will use [Eclipse](https://eclipse.org/) but you are free to choose any IDE that you like. Following steps are based on __Eclipse__ IDE
 
