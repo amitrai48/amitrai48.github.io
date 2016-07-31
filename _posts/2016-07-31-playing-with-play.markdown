@@ -14,7 +14,7 @@ Lets Play!
 
 **Java**
 
-Play Requires java 1.8 or higher please make sure you have proper JDKK installed by running 
+Play Requires java 1.8 or higher please verify you have proper JDK installed by running 
 
     java - version
 
@@ -22,7 +22,7 @@ If java is not installed or you have an older version please download java from 
 
 **Installing Play**
 
-You can download Play from their [official website](https://www.playframework.com/download). Unzip the download at a proper location where you have write access and it to your path.
+You can download Play from their [official website](https://www.playframework.com/download). Unzip the download at a proper location where you have write access and add it to your path.
 
 **Linux**
 
@@ -115,7 +115,7 @@ Why do you see a default web page when you hit `http://localhost:9000` ? Because
 
     GET     /hello                      controllers.HomeController.hello
 
-Its very trivial and self-explanatory, you just map a route, in this case a get call to /hello path, to a controller's function in this case `hello`. Now lets define this function in HomeController. Open `app/controllers/Homecontroller.scala` and following lines of code 
+Its very trivial and self-explanatory, you just map a route, in this case a `GET` call to /hello path, to a controller's function in this case `hello`. Now lets define this function in HomeController. Open `app/controllers/Homecontroller.scala` and following lines of code 
 
 {% highlight scala %}
     def hello = Action {
@@ -130,7 +130,7 @@ Actors
 
 Actors handle the request received by a Play application and generates a result to be sent to the client. An action returns a `play.api.mvc.Result` value, representing the HTTP response to send to the web client. In the above example Ok constructs a 200 OK response containing a text/plain response body.
 
-There are several ways to construct an Actor the simplest one was the one you created above. If you want to get a reference to the incoming request the following could would help : 
+There are several ways to construct an Actor the simplest one was the one you created above. If you want to get a reference to the incoming request the following could help : 
 
 {% highlight scala %}
     def hello = Action { request =>
@@ -252,7 +252,7 @@ class TodoRepo @Inject()(dbConfigProvider: DatabaseConfigProvider){
 
 {% endhighlight %}
 
-We create a `case class Todo` which makes it easy to map our table to our model. We then use dependency Injection to obtain obtain a `DatabaseConfig` (which is a Slick type bundling a database and driver).
+We create a `case class Todo` which makes it easy to map our table to our model. We then use dependency Injection to obtain a `DatabaseConfig` (which is a Slick type bundling a database and driver).
 
 {% highlight scala %}
 class TodoRepo @Inject()(dbConfigProvider: DatabaseConfigProvider){
@@ -445,7 +445,7 @@ Will update Soon.
 Play in Production
 --
 
-Now lets call `http://localhost:9000/some/url` . What do you see on your browser? You get an action not found page with all the proper routes defined. While hot-reload, error reporting on browser is an awesome feature in development mode we do not want such features in our production mode. There are various ways to run Play in production mode. And heres the best part you just need java installed on your target machine where you wanna deploy your Play app. Run following command from your root folder :
+Now lets call `http://localhost:9000/some/url` . What do you see in your browser? You get an action not found page with all the proper routes defined. While hot-reload, error reporting on browser is an awesome feature in development mode we do not want such features in our production mode. There are various ways to run Play in production mode. And heres the best part you just need java installed on your target machine where you wanna deploy your Play app. Run following command from your root folder :
 
     activator dist
 
