@@ -440,7 +440,57 @@ and now when you do a GET on `http://localhost:9000/api/todos` you should probab
 Edit and Delete Todos
 --
 
-Will update Soon.
+We start by defining routes for these 2 operations.
+
+**Routes**
+
+    PUT    /api/todos                   controllers.TodoController.editTodo
+
+    DELETE  /api/todos/:id              controllers.TodoController.deleteTodo(id: Int)
+
+We define a path param `id` in our `DELETE` route which we pass to our controller. Lets check out our controller now.
+
+**Controller**
+
+Add following content to your `TodoController.scala` file :
+
+{% highlight scala %}
+...
+
+def editTodo = Action.async(parse.json) {request =>
+    request.body.validate[Todo].fold(error => Future.successful(BadRequest(JsError.toJson(error))),{todo =>
+      todoRepo.editTodo(todo).map{rowsEffected =>
+        Ok(Json.toJson(rowsEffected))
+      }
+    })
+  }
+
+  def deleteTodo(id: Int) = Action.async {request =>
+      todoRepo.deleteTodo(id).map{rowsEffected =>
+        Ok(Json.toJson(rowsEffected))
+    }
+  }
+
+  ...
+{% endhighlight %}
+
+The code above is trivial and just calls appropriate function of our `TodoRepo` class.  Add the following in your `Todo.scala` file inside `TodoRepo` class : 
+
+{% highlight scala %}
+...
+
+ def editTodo(todo: Todo): Future[Int] = dbConfig.db.run {
+    todoTableQuery.filter(_.id === todo.id).update(todo)
+  }
+
+  def deleteTodo(id: Int): Future[Int] = dbConfig.db.run {
+    todoTableQuery.filter(_.id === id).delete
+  }
+
+...
+{% endhighlight %}
+
+There you go, since Slick helps you treat database entities as scala collections we apply filter to select appropriate todo to delete or edit. It returns the number of rows affected by the given operation. If the number of rows returned is 0, it means it could not find a row matching your condition.
 
 Play in Production
 --
