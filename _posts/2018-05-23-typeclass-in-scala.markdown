@@ -34,14 +34,14 @@ res1: User = User(1,Ginny)
 
 ### Subtype Polymorphism
 
-Subclasses provide different implementations of some superclass method. The decision on which implementation is being invoked is made at **runtime**. Let us consider a simple example of a function plus which adds to values of type `A`.
+Subclasses provide different implementations of some superclass method. The decision on which implementation is being invoked is made at **runtime**. Let us consider a simple example of a function plus which adds two values of type `A`.
 
 
 ```scala
 def plus[A](a: A, b: A): A = ???
 ```
 
-The implementation for the above function depends on type `A`. Based on type the definition of add changes. One way to solve them is through subtyping.
+The implementation for the above function depends on type `A`. Based on type, the definition of add changes. One way to solve them is through subtyping.
 
 ```scala
 scala> trait Plus[A] {
@@ -211,4 +211,4 @@ scala> "a".plus("b")
 res3: String = ab
 ```
 
-Typeclasses are extensively used in Scala functional programming libraries such as `ScalaZ`and `Cats` and is a very widely used pattern. I hope the above notes helped in demystify typeclasses in Scala.
+Typeclasses are extensively used in Scala functional programming libraries such as [ScalaZ](https://github.com/scalaz/scalaz) and [Cats](https://typelevel.org/cats/) and is a very widely used pattern. I hope the above notes helped in demystify typeclasses in Scala.
